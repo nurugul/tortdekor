@@ -1,0 +1,950 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+		<link rel="stylesheet" href="lightgallery.js-master/ex/assets/dist/css/bootstrap.min.css">
+		<link rel="stylesheet"  href="css/css/all.css">
+		<link rel="stylesheet"  href="css/style.css">
+		<link href="https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/css/lightgallery.css" rel="stylesheet">
+		
+			
+
+		<title>Hello, world!hello</title>
+	</head>
+	
+        <style>
+           
+            .demo-gallery > ul {
+                margin-bottom: 0;
+            }
+            .demo-gallery > ul > li {
+                float: left;
+                margin-bottom: 15px;
+                margin-right: 20px;
+                width: 200px;
+            }
+            .demo-gallery > ul > li a {
+                border: 3px solid #FFF;
+                border-radius: 3px;
+                display: block;
+                overflow: hidden;
+                position: relative;
+                float: left;
+            }
+            .demo-gallery > ul > li a > img {
+                -webkit-transition: -webkit-transform 0.15s ease 0s;
+                -moz-transition: -moz-transform 0.15s ease 0s;
+                -o-transition: -o-transform 0.15s ease 0s;
+                transition: transform 0.15s ease 0s;
+                -webkit-transform: scale3d(1, 1, 1);
+                transform: scale3d(1, 1, 1);
+                height: 100%;
+                width: 100%;
+            }
+            .demo-gallery > ul > li a:hover > img {
+                -webkit-transform: scale3d(1.1, 1.1, 1.1);
+                transform: scale3d(1.1, 1.1, 1.1);
+            }
+            .demo-gallery > ul > li a:hover .demo-gallery-poster > img {
+                opacity: 1;
+            }
+            .demo-gallery > ul > li a .demo-gallery-poster {
+                background-color: rgba(0, 0, 0, 0.1);
+                bottom: 0;
+                left: 0;
+                position: absolute;
+                right: 0;
+                top: 0;
+                -webkit-transition: background-color 0.15s ease 0s;
+                -o-transition: background-color 0.15s ease 0s;
+                transition: background-color 0.15s ease 0s;
+            }
+            .demo-gallery > ul > li a .demo-gallery-poster > img {
+                left: 50%;
+                margin-left: -10px;
+                margin-top: -10px;
+                opacity: 0;
+                position: absolute;
+                top: 50%;
+                -webkit-transition: opacity 0.3s ease 0s;
+                -o-transition: opacity 0.3s ease 0s;
+                transition: opacity 0.3s ease 0s;
+            }
+            .demo-gallery > ul > li a:hover .demo-gallery-poster {
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+            .demo-gallery .justified-gallery > a > img {
+                -webkit-transition: -webkit-transform 0.15s ease 0s;
+                -moz-transition: -moz-transform 0.15s ease 0s;
+                -o-transition: -o-transform 0.15s ease 0s;
+                transition: transform 0.15s ease 0s;
+                -webkit-transform: scale3d(1, 1, 1);
+                transform: scale3d(1, 1, 1);
+                height: 100%;
+                width: 100%;
+            }
+            .demo-gallery .justified-gallery > a:hover > img {
+                -webkit-transform: scale3d(1.1, 1.1, 1.1);
+                transform: scale3d(1.1, 1.1, 1.1);
+            }
+            .demo-gallery .justified-gallery > a:hover .demo-gallery-poster > img {
+                opacity: 1;
+            }
+            .demo-gallery .justified-gallery > a .demo-gallery-poster {
+                background-color: rgba(0, 0, 0, 0.1);
+                bottom: 0;
+                left: 0;
+                position: absolute;
+                right: 0;
+                top: 0;
+                -webkit-transition: background-color 0.15s ease 0s;
+                -o-transition: background-color 0.15s ease 0s;
+                transition: background-color 0.15s ease 0s;
+            }
+            .demo-gallery .justified-gallery > a .demo-gallery-poster > img {
+                left: 50%;
+                margin-left: -10px;
+                margin-top: -10px;
+                opacity: 0;
+                position: absolute;
+                top: 50%;
+                -webkit-transition: opacity 0.3s ease 0s;
+                -o-transition: opacity 0.3s ease 0s;
+                transition: opacity 0.3s ease 0s;
+            }
+            .demo-gallery .justified-gallery > a:hover .demo-gallery-poster {
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+            .demo-gallery .video .demo-gallery-poster img {
+                height: 48px;
+                margin-left: -24px;
+                margin-top: -24px;
+                opacity: 0.8;
+                width: 48px;
+            }
+            .demo-gallery.dark > ul > li a {
+                border: 3px solid #04070a;
+            }
+            .home .demo-gallery {
+                padding-bottom: 80px;
+            }
+        </style>
+
+	<body>
+		<header>
+			<div class="bg_grey verhnee_menu">
+			    <div class="container">
+					<div class="row">
+						<div class="col-6">
+							<div class="row">
+								<div class="col-5 b-r">
+									<a href="#"><i class="far fa-bell"></i>Sms Default Welcome!</a>
+								</div>
+								<div class="col-4" style="text-align: right;">
+									<a href="">
+										<span class="block_podarki">
+											<i class="fas fa-gift"></i>
+											<sup class="count_gift">2</sup>
+										</span>
+							 			Gift Vouchers
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-5">
+							<div class="row t-r">
+								<div class="col-4">
+									<nav class="navbar navbar-expand-lg navbar-light bg-light pl-0 pr-0 cart float-right">
+										<div class="collapse navbar-collapse" id="navbarSupportedContent">
+											<ul class="navbar-nav mr-auto">
+												<li class="nav-item dropdown">
+													<a class="nav-link dropdown-toggle pl-0 pr-0 pt-0 pb-0" href="#"  id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Language: <span class="get_arrow">ENG</span>
+													</a>
+													<div class="dropdown-menu lang" aria-labelledby="navbarDropdown2">
+														<a class="dropdown-item" href="#">EN-English</a>
+														<a class="dropdown-item" href="#">US-American</a>
+														<a class="dropdown-item" href="#">FR-France</a>
+													</div>
+												</li>
+											</ul>
+									    </div>
+									</nav>
+								</div>
+
+								<div class="col-4">
+									<nav class="navbar navbar-expand-lg navbar-light bg-light pl-0 pr-0 cart float-right">
+										<div class="collapse navbar-collapse" id="navbarSupportedContent">
+											<ul class="navbar-nav mr-auto">
+												<li class="nav-item dropdown">
+													<a class="nav-link dropdown-toggle pl-0 pr-0 pt-0 pb-0" href="#"  id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Currency: <span class="get_arrow">USD</span>
+													</a>
+													<div class="dropdown-menu lang" aria-labelledby="navbarDropdown2">
+														<a class="dropdown-item" href="#">USD $</a>
+														<a class="dropdown-item" href="#">Россия руб</a>
+														<a class="dropdown-item" href="#">Кыргызстан сом</a>
+													</div>
+												</li>
+											</ul>
+									    </div>
+									</nav>
+								</div>
+								
+								<div class="col-4">
+									<a href=""><i class="fas fa-user"></i>Sign in/Register</a>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bg_white pt-4 pb-4 centralnoe_menu">
+				<div class="container">
+					<div class="row">
+						<div class="col-3 pt-4 ">
+							<div class="logo">
+								<a class="nav-link" href="/"><img src="img/logo3.jpg" alt=""></a>
+							</div>
+						</div>
+						<div class="col-3 pt-4 ">
+							<div class="menu_desc">
+								<div class="levaya">
+									<i class="fa fa-calendar st-calendar" aria-hidden="true"></i>
+								</div>
+								<div class="desc_pravaya">
+									<p class="f-b">Mon - Sat 8h00 -18h00</p>
+									<p class="text-secondary"><span class="txt_grey">Sunday</span> <span class="text-danger">CLOSED</span></p>
+								</div>
+							</div>
+						</div>
+	
+						<div class="col-3 pt-4 ">
+							<div class="menu_desc">
+								<div class="levaya">
+									<i class="fa fa-bookmark" aria-hidden="true"></i>
+								</div>
+								<div class="desc_pravaya">
+									<p class="f-b">Every Week Sales!</p>
+									<p class="text-secondary"><span class="txt_grey">Discount</span> <span class="text-warning">up to 50% off.</span></p>
+								</div>
+							</div>
+						</div>	
+						<div class="col-3 pt-4 ">
+							<div class="menu_desc">
+								<div class="levaya">
+									<i class="fa fa-phone st-phone" aria-hidden="true"></i>
+								</div>
+								<div class="desc_pravaya">
+									<p class="f-b">Have  Questions?</p>
+									<p class="text-secondary"><span class="txt_grey">Call:</span> <span class="text-info">1900 - 819898</span></p>
+								</div>
+							</div>
+						</div>		
+					</div>
+				</div>
+			</div>
+			<div class="bg_grey nijnee_menu">
+			    <div class="container">
+			    	<div class="row">
+			    		<div class="col-10">
+			    			<nav class="navbar navbar-expand-lg navbar-light bg-light pl-0 pr-0">
+			    				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			    					<ul class="navbar-nav mr-auto">
+			    						<li class="nav-item active">
+			    							<a class="nav-link" href="/">КАТАЛОГ <span class="sr-only">(current)</span></a>
+			    						</li>
+			    						<li class="nav-item">
+			    							<a class="nav-link" href="#">РЕЦЕПТЫ</a>
+			    						</li>
+			    						<li class="nav-item dropdown">
+			    							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			    								ДОСТАВКА И ОПЛАТА
+			    							</a>
+			    							<div class="dropdown-menu" aria-labelledby="		navbarDropdown">
+			    								<a class="dropdown-item" href="#">Оплата через элсом</a>
+			    								<a class="dropdown-item" href="#">Доставка до дверей</a>
+			    								<div class="dropdown-divider"></div>
+			    								<a class="dropdown-item" href="#">По всему городу</a>
+			    							</div>
+			    						</li>
+			    						<li class="nav-item">
+			    							<a class="nav-link" href="#">О КОМПАНИИ</a>
+			    						</li>
+			    						<li class="nav-item">
+			    							<a class="nav-link" href="#">ВИДЕО-УРОКИ</a>
+			    						</li>
+			    					</ul>
+			    					<form action="" method="GET" class="form-inline my-2 my-lg-0 search_form">
+			    						<input class="form-control mr-sm-2" type="text"  name="poisk" placeholder="chto vy hotite naiti" aria-label="Search">
+			    						<button class="pokazat_rezultat btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+			    					</form>
+			    				</div>
+			    			</nav>
+			    		</div>
+			    		<div class="col-2">
+			    			<nav class="navbar navbar-expand-lg navbar-light bg-light pl-0 pr-0 cart float-right">
+			    				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			    					<ul class="navbar-nav mr-auto">
+			    						<li class="nav-item dropdown">
+			    							<a class="nav-link dropdown-toggle pl-0 pr-0 pt-0 pb-0" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			    								<div class="cart_open">
+			    									<div class="icon_cart"><i class="fas fa-shopping-bag"></i>
+			    									</div>
+			    									<div class="korzina_kolichestvo">
+			    										<p>My Cart.</p>
+			    										<span class="kol_tovarov"></span>
+			    										<span class="summa_v_korzine"></span>
+			    									</div>
+			    								</div>
+			    							</a>
+			    							<div class="dropdown-menu data_cart" aria-labelledby="navbarDropdown">
+			    								<div class="block_opisanie_korziny">
+
+													<div class="listing_zakazov"></div>
+													<div class="itogvaya_cena">
+														<span>Total:</span>
+														<span class="itog"></span>
+													</div>
+													<div class="checkout">
+														<a href="https://wa.me/971559762623?text=Zakaz!ot saita http://wp1.gulnuru-ablazova.m3rem.spectrum.myjino.ru/"> Kупить </a>
+
+													</div>
+												</div>
+			    							</div>
+			    						</li>
+			    					</ul>
+			    				</div>
+							</nav>
+			    		</div>
+			    	</div>
+			    </div>
+			</div>
+		</header>
+
+		<!--Container-->
+
+		<div class="container">
+
+			<div class="braedcrumbs pt-4 pb-4"><b>Home / Shop Products</b> / в наличии Кондитерский шпатель</div>
+
+			<!--Dannye Tovarov-->
+
+			<div class="row menu_head">
+				<div class="col-7">
+					<ul class="block_photo" id="lightgallery">
+						<li data-src="img/slider/nijniy slide/utujjok.jpg">
+							<img src="img/slider/nijniy slide/utujjok.jpg" alt="" class="img-responsive">
+						</li>
+						<li data-src="img/slider/nijniy slide/shpatelmetal.jpg">
+							<img src="img/slider/nijniy slide/shpatelmetal.jpg" alt="" class="img-responsive">
+						</li>
+						<li data-src="img/slider/nijniy slide/3sht.jpg">
+							<img src="img/slider/nijniy slide/3sht.jpg" alt="" class="img-responsive">
+						</li>
+						<li data-src="img/slider/nijniy slide/wooden.jpg">
+							<img src="img/slider/nijniy slide/wooden.jpg" alt="" class="img-responsive">
+						</li>
+					</ul>
+				
+				</div>	
+
+				<div class="col-5 product_info">
+					<h1 class="title def_color_txt">Кондитерский шпатель.</h1>
+					<p class="review"><img src="img/site2/stars.png" alt=""> 6 Review(s)</p>
+					<p class="price def_color_txt">
+						<span class="originalnaya_cena">
+							<span class="symbol">$</span>
+							<span class="cena_za_odin">21.00</span>
+						</span>
+					</p>
+					<p class="mini_desc">
+					Пластиковый скребок предназначенный для покрытия и выравнивания тортов кремом высотой до 13см.
+
+					Фигурная форма кулинарного скребка позволит Вам четко выдержать идеальную боковую поверхность.
+					</p>
+					<!--Color-->
+					<div class="product_color">
+						<p class="def_color_txt font-weight-bold mb-0">Выберите цвет:</p>
+						<ul class="list_option">
+							<li><span class="birch"><span>birch</span></li>
+							<li><span class="yellow"><span>yellow</span></li>
+							<li><span class="blue"><span>blue</span></li>
+							<li><span class="pink"><span>pink</span></li>
+							<li><span class="green"><span>green</span></li>
+						</ul>
+					</div>
+					<!--Massa-->
+					<div class="product_massa mt-1">
+						<p class="def_color_txt font-weight-bold mb-0">Выберите массу:</p>
+						<ul class="list_option">
+							<li> <span><span>.25gr</span></span> </li>
+							<li> <span><span>.5gr</span></span> </li>
+							<li> <span><span>.75gr</span></span> </li>
+							<li> <span><span>1kg</span></span> </li>
+							<li> <span><span>1.5kg</span></span> </li>
+						</ul>
+					</div>
+					<!--Buttons-->
+					<div class="row cl_both pt-4">
+
+						<div class="col-4">
+
+							<div class="count_product">
+								<button type="button" class="js-minus" data-type="minus" data-field="">-
+								</button>
+									
+									<input type="text" name="number" value="1" class="js-number">
+
+								<button type="button" class="js-plus" data-type="plus" data-field="">+
+								</button>
+							</div>
+
+						</div>
+					
+						<div class="col-6">
+							<div class="product_btns">  <!--dlya agar-agar-->
+								<input type="hidden" name="nazvanie_tovara" value="Mastika">
+								<input type="hidden" name="cena" value="450">
+								<input type="hidden" name="svet" value="pink">
+								<input type="hidden" name="massa" value="1kg">
+								<input type="hidden" name="url" value="utyug">
+
+								<a href="#" class="add_to_cart">
+									<span class="fa fa-shopping-bag"></span>
+								</a>
+								<a href="#" class="zoa-btn zoa-wishlist">
+									<span class="fa fa-balance-scale"></span>
+								</a>
+								<a href="#" class="zoa-btn zoa-wishlist">
+									<span class="fa fa-heart "></span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			
+
+			<div class="tabs mt-5">
+					<ul class="head_tabs">
+						<li data-open-tabs="tab1" class="active">Description</li>
+						<li data-open-tabs="tab2">Additional Information</li>
+						<li data-open-tabs="tab3">Review(s)</li>
+					</ul>
+
+					<div class="data_tabs cl_both">
+						
+						<!--Block 1-->
+						<div id="tab1" class="active">
+							<div class="row">
+								<div class="col-8">
+									<h3>Block 1</h3>
+									<p>
+										<b>Миндальная мука мелкого помола</b>
+ 										Миндальная мука — это измельчённый до определенной фракции миндальный орех, который используют в процессе приготовления кремов, соусов и супов, многих десертов, ставших классическими. Наша компания производит и выпускает муку миндальную мелкого помола от 1 кг, благодаря которой ваши блюда приобретут деликатный аромат и изысканный вкус.
+										
+									</p>
+
+									<p>
+										<b>Полезные свойства и особенности товара</b><br>
+										Придаёт блюдам более густую консистенцию.
+
+										При термической обработке сохраняются все полезные свойства.
+
+										Отсутствие глютена — один из основных критериев выбора муки для людей с непереносимостью данного вида белка.
+
+										Нежный ореховый привкус и аромат.
+
+										Низкая калорийность данного продукта не даст набрать лишний вес.
+
+										Вдвое больше питательной ценности, чем в муке пшеничной.
+									</p>
+									<ul class="active_dots pl-3">
+										<li><b>Особенности хранения:</b></li>
+										<li>В жаркое летнее время предпочтительнее хранить в темном прохладном месте.</li>
+										<li>Не желательно смешивать старую и новую муку.</li>
+										<li>Срок хранения не должен превышать четыре месяца.</li>
+										<li>Не храните её около продуктов с резким запахом</li>
+									</ul>
+								</div>
+								<div class="col-4">
+									<img src="img/desc/muka.jpg">
+								</div>
+							</div>
+						</div>
+						<!--Block 2-->
+						<div id="tab2">
+							<div class="row">
+								<h3>Block 2</h3>
+								<p class="info1">
+									<em>Duis id odio quis purus lacinia </em> viverra non eget sapien. Aenean sed tortor sapien. Aenean ut iaculis justo, in hendrerit sem. Ut ac tincidunt velit, ac ultrices est.<strong> Nullam eu massa auctor,</strong> aecenas in ligula neque. Etiam nec ligula finibus, scelerisque tellus sed, rutrum mauris. Donec iaculis mattis interdum. Praesent et mauris non orci lacinia dignissim. Pellentesque vel sapien<em> ut ante interdum aliquam.</em>
+								</p>
+								<p class="info2">
+									<span></span>
+										<em>"Nullam eu massa auctor, euismod arcu eget, suscipit nisl. Maecenas in ligula neque. Etiam nec ligula finibus, scelerisque tellus sed, rutrum mauris. Donec iaculis mattis interdum. Praesent et mauris non orci lacinia dignissim. Pellentesque vel sapien ut ante interdum aliquam.</em>
+								</p>
+							</div>
+							<div class="row">
+								<div class="col-4">
+									<img src="img/desc/cremette.jpg">
+									<p>Photo by Somebody</p>
+								</div>
+								<div class="col-8">
+									<p>
+										Ведущая европейская компания представляет товар специально для профессионального использования.
+										 Творожный сыр-<b><em> Сыр творожный CREMETTE Professional</em></b> имеет уникальный нежный сливочный вкус
+										 и благодаря своей прекрасной консистенции подходит для множества разнообразных блюд. 
+										Он хорошо сочетается с рыбой, подходит для изготовления десертов, суши-роллов и других кулинарных изделий.
+									</p>
+									<p>
+										 Благодаря минимальным выделениям сыворотки и пластичной консистенции, он может принять любую необходимую Вам форму.
+										 Приобрести творожный сыр<b> <em>Cremette Professional в Москве</em></b> Вы сможете в<b><em> METRO.</em></b>Состав: творог (пастеризованное коровье
+										 молоко, соль поваренная пищевая, молокосвертывающий фермент, закваска на культурах молочнокислых микроорганизмов),
+										 загуститель модифицировнный, крахмал.Пищевая ценность на 100 грамм: белки - 6 гр., жиры - 26 гр., углеводы - 3 гр.
+										Энергетическая ценность: 270 Ккал.Условия хранения: хранить при температуре от +40 до +80С. Открытую упаковку хранить
+										 не более 72 часов.<b><em>Страна-изготовитель: Германия.</em></b>
+									</p>
+								</div>
+							</div>
+							<p class="info3">
+								Данная информация о товаре предоставлена исключительно в целях ознакомления и не является публичной офертой. Интернет-магазин bakenart.by использует данные о товарах, представленные на официальных сайтах производителей и поставщиков, а также в документации к товару. Однако производители оставляют за собой право изменять внешний вид, характеристики и комплектацию изделий, предварительно не уведомляя продавцов и потребителей. При совершении покупки, убедительная просьба, уточнять интересующие вас сведения о товаре непосредственно у продавцов и консультантов.
+							</p>
+							<div class="row col-12">
+								<div class="share">
+									<div class="share2">
+										<p>Share:</p>
+										<ul>
+											<li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+											<li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
+											<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+											<li><a href="#"><i class="fab fa-pinterest-square"></i></a></li>
+											<li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--Block 3-->
+						<div id="tab3">
+							<h3>Block 3</h3>
+							<p><b>Be the first to review,order and enjoy “Tortdekor products”</b></p>
+							<p class="color-grey">The email address will not be published. Required fields are marked*
+								<p class="review"><span>Your rating:</span><img src="img/site2/stars.png"></p>
+								<p>Your review*</p>
+							</p>
+							
+							<div class="comment">
+								<form action="" method="GET">
+									<textarea name="desc_comment" id="" cols="80" rows="10">Vvedite text</textarea>
+									<p>
+										<input type="text" name="name" placeholder="Vvedite vashe Imya" required>
+										<input type="number" name="number"  placeholder="Vvedite vash nomer" required>
+									</p>
+									<p><input type="submit">
+									</p>
+								</form>
+							</div>
+						</div>
+					</div>
+				
+			</div>
+			<div class="btn_block mt-10">
+					<div class="left_btn">
+						<a href="#"><i class="fa fa-chevron-left" aria-hidden="true"></i></a><p>La Femme For Flaunt Magazine<br> <em>Jan 30, 2018</em></p>
+					</div>
+					<div class="right_btn">
+						<a href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i></a><p>How did gardener and the gang first...<br> <em>Jan 30, 2018</em></p>
+					</div>
+			</div>	
+		</div>    <!--close container-->
+		<div class="mt-5 related_block">
+			<div class="container">				
+				<h4 class="txt_related">Related Products</h4>
+				<div class="slider slider_product">
+					<!-- Слайдер 1 -->
+					
+					<div class="product_cont">
+						<a href="img/site2/agar4.jpg" target="_blank">
+							<div class="block_img">
+								<img src="img/site2/agar4.jpg" alt="agar-agar" height="210" width="210">
+								
+							</div>
+							<span class="lbl_title green">New</span>
+							<div class="product_desc">
+								<p class="ttl">
+									Agar-Agar,1кг
+								</p>
+								<p class="stars">
+									<span><img  src="img/slider/nijniy slide/stars.png"    height="15"></span>
+									<span>6 Review(s)</span>
+								</p>
+								<p class="price">
+									<span class="originalnaya_cena"><span class="synbol">$</span><span class="cena_za_odin">33.00</span></span>
+									<span class="staraya_cena">$42.00</span>
+								</p>
+							</div>
+
+						</a>
+					</div>
+
+
+					<!-- Слайдер 2 -->
+					<div class="product_cont">
+						<a href="img/slider/nijniy slide/shprisy.jpg" target="_blank">
+							<div class="block_img">
+								<img src="img/slider/nijniy slide/shprisy.jpg" alt="shprisy" height="210">
+								
+								<span class="lbl_title green">New</span>
+								<div class="product_desc">
+									<p class="ttl">
+										Щприц силикон 12см
+									</p>
+									<p class="stars">
+										<span><img src="img/slider/nijniy slide/stars.png" height="15"></span>
+										<span>6 Review(s)</span>
+									</p>
+									<p class="price">
+										<span class="originalnaya_cena"><span class="synbol">$</span><span class="cena_za_odin">23.00</span></span>
+										<span class="staraya_cena">$42.00</span>
+									</p>
+								</div>
+							</div>
+						</a>
+						
+					</div>
+					<!--slide3-->
+					<div class="product_cont">
+						<a href="img/slider/nijniy slide/valik.jpg" target="_blank">
+							<div class="block_img">
+								<img src="img/slider/nijniy slide/valik.jpg" alt="valik" height="210">
+								
+								<span class="lbl_title green">New</span>
+								<div class="product_desc">
+									<p class="ttl">
+
+										Валик 
+									</p>
+									<p class="stars">
+										<span><img src="img/slider/nijniy slide/stars.png" height="15"></span>
+										<span>6 Review(s)</span>
+									</p>
+									<p class="price">
+										<span class="originalnaya_cena"><span class="synbol">$</span><span class="cena_za_odin">22.00</span></span>
+										<span class="staraya_cena">$42.00</span>
+									</p>
+								</div>
+							</div>
+						</a>
+					</div>
+					<!--slide4-->
+					<div class="product_cont">
+						<a href="img/slider/nijniy slide/utujjok.jpg" target="_blank">
+							<div class="block_img">
+								<img src="img/slider/nijniy slide/utujjok.jpg" alt="utujok" height="210">
+								
+								<span class="lbl_title red">New</span>
+								<div class="product_desc">
+									<p class="ttl">
+										Утюжок кондитерский
+									</p>
+									<p class="stars">
+										<span><img src="img/slider/nijniy slide/stars.png" height="15"></span>
+										<span>6 Review(s)</span>
+									</p>
+									<p class="price">
+										<span class="originalnaya_cena"><span class="synbol">$</span><span class="cena_za_odin">25.00</span></span>
+										<span class="staraya_cena">$42.00</span>
+									</p>
+								</div>
+							</div>
+						</a>
+					</div>
+					<!--slide 5-->
+					<div class="product_cont">
+						<a href="img/slider/nijniy slide/domik.jpg" target="_blank">
+							<div class="block_img">
+								<img src="img/slider/nijniy slide/domik.jpg" alt="domik" height="210" width="210">
+								
+								<span class="lbl_title green">New</span>
+								<div class="product_desc">
+									<p class="ttl">
+
+										Форма "Теремок"
+									</p>
+									<p class="stars">
+										<span><img src="img/slider/nijniy slide/stars.png" height="15"></span>
+										<span>6 Review(s)</span>
+									</p>
+									<p class="price">
+										<span class="originalnaya_cena"><span class="synbol">$</span><span class="cena_za_odin">21.00</span></span>
+										<span class="staraya_cena">$42.00</span>
+									</p>
+								</div>
+							</div>
+						</a>
+					</div>
+
+					<!-- Слайдер 6 -->
+					<div class="product_cont">
+						<a href="img/slider/nijniy slide/keksklassika.jpg" target="_blank">
+
+							<img src="img/slider/nijniy slide/keksklassika.jpg" alt="klassika" height="210">
+							<span class="lbl_title green">New</span>
+							<div class="product_desc">
+								<p class="ttl">
+									Форма кексов 6яч.
+								</p>
+								<p class="stars">
+									<span><img src="img/slider/nijniy slide/stars.png" height="15"></span>
+									<span>6 Review(s)</span>
+								</p>
+								<p class="price">
+									<span class="originalnaya_cena"><span class="synbol">$</span><span class="cena_za_odin">46.00</span></span>
+									<span class="staraya_cena">$42.00</span>
+								</p>
+							</div>
+
+						</a>
+					</div>
+
+					<!-- Слайдер 7 -->
+					<div class="product_cont">
+						<a href="img/slider/nijniy slide/podstavka troika.jpg" target="_blank">
+
+							<img src="img/slider/nijniy slide/pink box.jpg" alt="korobka pink" height="210">
+							<span class="lbl_title green">New</span>
+							<div class="product_desc">
+								<p class="ttl">
+									Коробка подарочная 
+								</p>
+								<p class="stars">
+									<span><img src="img/slider/nijniy slide/stars.png" height="15"></span>
+									<span>6 Review(s)</span>
+								</p>
+								<p class="price">
+									<span class="originalnaya_cena"><span class="synbol">$</span><span class="cena_za_odin">46.00</span></span>
+									<span class="staraya_cena">$42.00</span>
+								</p>
+							</div>
+						</a>
+					</div>
+
+					<!-- Слайдер 8 -->
+					<div class="product_cont">
+						<a href="img/slider/nijniy slide/podstavka troika.jpg" target="_blank">
+
+							<img src="img/slider/nijniy slide/podstavka troika.jpg" alt="podstavka 3ka" height="210">
+							<span class="lbl_title green">New</span>
+							<div class="product_desc">
+								<p class="ttl">
+									Подставка-тройка
+								</p>
+								<p class="stars">
+									<span><img src="img/slider/nijniy slide/stars.png" height="15"></span>
+									<span>6 Review(s)</span>
+								</p>
+								<p class="price">
+									<span class="originalnaya_cena"><span class="synbol">$</span><span class="cena_za_odin">46.00</span></span>
+									<span class="staraya_cena">$42.00</span>
+								</p>
+							</div>
+
+						</a>
+					</div>
+
+
+					<!-- Слайдер 9 -->
+					<div class="product_cont">
+						<a href="img/slider/nijniy slide/korobka.jpg" target="_blank">
+
+							<img src="img/slider/nijniy slide/korobka.jpg" alt="green box" height="210">
+							<span class="lbl_title green">New</span>
+							<div class="product_desc">
+								<p class="ttl">
+									
+									"Клетка зеленая"
+								</p>
+								<p class="stars">
+									<span><img src="img/slider/nijniy slide/stars.png" height="15"></span>
+									<span>6 Review(s)</span>
+								</p>
+								<p class="price">
+									<span class="originalnaya_cena"><span class="synbol">$</span><span class="cena_za_odin">46.00</span></span>
+									<span class="staraya_cena">$42.00</span>
+								</p>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>			
+			
+
+			<!--FOOTER-->
+			<footer>
+				<div class="footers">
+					<div class="container">
+						<div class="border"></div>
+						<div class="one">
+							<div class="row">
+								<div class="col-4">
+									<div class="logo-tort">
+										<a href="#"><img src="img/logo3.jpg" alt="logo"></a>
+										<p><em><a href="#">Tortdekor is a premium eCommerce theme with<br>
+										advanced admin module.</a></em></p>
+									</div>
+									<div class="icon-dekor">
+										<ul>
+											<li><a href="#"><i class="far fa-envelope"aria-hidden="true"></i> Telephone: +996773246565</a></li>
+											<li><a href="#"><i class="fas fa-phone"aria-hidden="true"></i> Email: tortdekor@gmail.com</a></li>
+											<li><a href="#"><i class="far fa-clock"aria-hidden="true"></i>   ежедневно с 10 до 20ч<br> 
+											     Воскресенье-сан.день</a></li>
+										</ul>
+									</div>
+								</div>
+								<!-- footer-left -->
+								<div class="col-4">
+									<div class="row ft-center">
+										<div class="information">
+											<h4>Information</h4>
+											<div class="border2"></div>
+											<a href="#">About Us</a>
+											<br>
+											<a href="#">Shipping &amp; Returns</a>
+											<br>
+											<a href="#">Privacy Notice</a>
+											<br>
+											<a href="#">Conditions of Use</a>
+											<br>
+											<a href="#">RSS</a>
+											<br>
+										</div>
+										<div class="information-center">
+											<h4>Service</h4>
+											<div class="border2"></div>
+											<a href="#">Online support</a>
+											<br>
+											<a href="#">Help &amp; FAQs</a>
+											<br>
+											<a href="#">Call Center</a>
+											<br>
+											<a href="#">Contact Us</a>
+											<br>
+											<a href="#">Custom Link</a>
+											<br>
+										</div>
+									</div>
+								</div>
+								<!-- footer center -->
+								<div class="col-4">
+									<div class="instagram">
+										<h4>Instagram</h4>
+										<div class="border2"></div>
+									</div>
+									<div class="img-insta">
+										<ul>
+											<li><a href="#"><img src="img/instagram/23.png" alt="img"></a></li>
+											<li><a href="#"><img src="img/instagram/mastika.jpg" alt="img"></a></li>
+											<li><a href="#"><img src="img/instagram/fontan.jpg" alt="img"></a></li>
+										</ul>
+									</div>
+									<div class="img-insta">
+										<ul>
+											<li><a href="#"><img src="img/instagram/8.png" alt="img"></a></li>
+											<li><a href="#"><img src="img/instagram/podstavka.jpg" alt="img"></a></li>
+											<li><a href="#"><img src="img/instagram/unicorn.jpg" alt="img"></a></li>
+										</ul>
+									</div>
+								
+									<!-- footer right -->
+								</div>
+								<div class="container">
+									<div class="row endfooter col-12">
+										<div class="leftendfooter">
+											<ul>
+												<li><a href="#"><i class="fab fa-twitter-square"aria-hidden="true"></i></a></li>
+												<li><a href="#"><i class="fab fa-skype"aria-hidden="true"></i></a></li>
+												<li><a href="#"><i class="fab fa-viber"aria-hidden="true"></i></a></li>
+												<li><a href="#"><i class="fab fa-facebook-messenger"aria-hidden="true"></i></a></li>
+											</ul>
+										</div>
+										<div class="rightendfooter">
+											<ul>
+												<li><a href="#">Home</a></li>
+												<li><a href="#">New Arrivals</a></li>
+												<li><a href="#">Site map</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="border"></div>
+					</div>
+				</div>
+			</footer>
+
+		
+		
+		
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+			<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+		<script src="../js/jquery-3.5.1.min.js"></script>
+		<script src="../js/my.js"></script>
+
+		<!--Slick Slider-->
+
+		<script src="../../slick/slick.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="../../slick/slick.css"/>
+		<link rel="stylesheet" type="text/css" href="../../slick/slick-theme.css"/>	
+
+		<!--gallery-->
+
+		<script src="https://cdn.jsdelivr.net/picturefill/2.3.1/picturefill.min.js"></script>
+        <script src="https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/js/lightgallery.js"></script>
+        <script src="https://cdn.rawgit.com/sachinchoolur/lg-pager.js/master/dist/lg-pager.js"></script>
+        <script src="https://cdn.rawgit.com/sachinchoolur/lg-autoplay.js/master/dist/lg-autoplay.js"></script>
+        <script src="https://cdn.rawgit.com/sachinchoolur/lg-fullscreen.js/master/dist/lg-fullscreen.js"></script>
+        <script src="https://cdn.rawgit.com/sachinchoolur/lg-zoom.js/master/dist/lg-zoom.js"></script>
+        <script src="https://cdn.rawgit.com/sachinchoolur/lg-hash.js/master/dist/lg-hash.js"></script>
+        <script src="https://cdn.rawgit.com/sachinchoolur/lg-share.js/master/dist/lg-share.js"></script>
+       <script>
+			lightGallery(document.getElementById('lightgallery'));
+
+			$('.slider_product').slick({
+				infinite: true,
+				slidesToShow: 5,
+				dots: true,
+				speed: 500,
+				slidesToScroll: 5,
+				responsive: [
+					{
+						breakpoint: 768,
+						settings: {
+							slidesToShow: 3,
+							slidesToScroll: 3
+						}
+					},
+					{
+						breakpoint: 480,
+						settings: {
+							slidesToScroll: 2,
+							slidesToShow: 2
+						}
+					}
+				]
+			});
+
+		</script>
+	</body>
+</html>
